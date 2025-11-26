@@ -1,11 +1,14 @@
 # pico-project-template
 A template with the Raspberry Pi Pico SDK as a submodule. To be used for RP2040 development projects.
 - Defines CMakeLists.txt and project structure
-- Uses example blink.c from pico-examples
+- Builds a simple example blink program
 
 ## Environment
 Setup compiler toolchain for your platform, example for ubuntu:
 ```bash
+# gcc-arm-none-eabi is the cross compiler gcc for an arm target
+# libnewlib-arm-none-eabi is the C standard library implementation, it delegates hardware functions to the SDK
+# libstdc++-arm-none-eabi-newlib is the C++ standard library similar to above
 apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib
 ```
 Set `PICO_SDK_PATH` to the path of the SDK (included as submodule here)
